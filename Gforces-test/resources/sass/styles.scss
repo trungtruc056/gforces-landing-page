@@ -23,7 +23,7 @@
 
 //Navigation PC
 nav.menu-mobile{
-  @media (min-width: 768px) {
+  @media (min-width: 1349px) {
     display: none !important;
   }
 }
@@ -122,7 +122,7 @@ nav.menu-mobile{
 
 //Navigation Mobile
 nav.menu-desktop{
-  @media (max-width:767px){
+  @media (max-width: 1350px){
     display: none;
   }
 }
@@ -142,7 +142,7 @@ nav.menu-mobile{
 
   .nav-logo {
     text-align: left;
-    width: 150px;
+    width: 200px;
     display: inline-block;
     padding-right: 50px;
     padding: 15px 0;
@@ -217,6 +217,8 @@ nav.menu-mobile{
 .header{
   background-color: #707374;
   background-image: url('../images/header.jpg');
+  background-size: cover;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
@@ -226,7 +228,7 @@ nav.menu-mobile{
   }
 
   @media (max-width: 767px){
-    height: 100vh;
+    height: 70vh;
   }
 
   .row{
@@ -253,6 +255,24 @@ nav.menu-mobile{
       padding: 50px 80px;
       top: 28%;
       left: 8%;
+
+      @media (max-width: 1024px) {
+        top: 40%;
+        left: 20%;
+      }
+
+      @media (max-width: 991px) and (min-width: 768px) {
+        top: 30%;
+        left: 10%;
+      }
+
+      @media (max-width: 767px) {
+        width: 100%;
+        left: 0;
+        top: 20%;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
 
       h1{
 
@@ -294,7 +314,6 @@ nav.menu-mobile{
           line-height: 1.2;
           color: #fff;
           border: 2px solid;
-          @include box-shadow(0px 10px 11px -5px rgba(0,0,0,0.3));
           display: inline-block;
           text-transform: uppercase;
 
@@ -310,8 +329,9 @@ nav.menu-mobile{
           }
 
           &:hover,&:focus,&:active{
-            background-color: $second-color;
-            border-color: $second-color;
+            background-color: $hover-color;
+            border-color: $hover-color;
+            @include box-shadow(0 15px 15px -15px rgba(0,0,0,0.5));
             @include transition(all 0.3s ease);
           }
         }
@@ -401,8 +421,7 @@ nav.menu-mobile{
       padding: 50px 70px;
 
       @media screen and (min-width: 768px ) and (max-width: 1200px){
-        padding: 100px 0;
-        margin: 0 -15px;
+        padding: 100px 0 0 0;
       }
 
       @media (max-width: 767px){
@@ -441,6 +460,13 @@ nav.menu-mobile{
           font-size: 15px;
           text-transform: uppercase;
           padding: 15px 80px;
+
+          &:hover,&:focus,&:active{
+            background-color: $hover-color;
+            border-color: $hover-color;
+            @include box-shadow(0 15px 15px -15px rgba(0,0,0,0.5));
+            @include transition(all 0.3s ease);
+          }
         }
       }
 
@@ -498,12 +524,19 @@ nav.menu-mobile{
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: grba(0,0,0,0.35);
   height: 70vh;
+
+  @media (max-width: 1024px) {
+    height: 50vh;
+  }
 
   .block-video {
     width: 400px;
     padding-top: 100px;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
 
     h2{
       text-transform: uppercase;
@@ -511,18 +544,33 @@ nav.menu-mobile{
       font-size: 30px;
       font-weight: 400;
       line-height: 1.2;
-      padding-bottom: 25px
+      padding-bottom: 25px;
     }
 
     p {
       color: #fff;
       padding-bottom: 40px;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 1.5s steps(30, end);
+
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
     }
 
-    .btn-main a{
+    .main-btn a{
       color: #fff;
       background: $primary-color;
       padding: 15px 80px;
+
+      &:hover,&:focus,&:active{
+        background-color: $hover-color;
+        border-color: $hover-color;
+        @include box-shadow(0 15px 15px -15px rgba(0,0,0,0.5));
+        @include transition(all 0.3s ease);
+      }
     }
   }
 }
@@ -549,6 +597,10 @@ nav.menu-mobile{
   .col-md-6 {
     display: inline-block;
     width: 48%;
+
+    @media (max-width: 767px) {
+      width: 100%;
+    }
   }
 }
 
@@ -556,15 +608,35 @@ nav.menu-mobile{
   background-color: #fff;
   ul {
     padding: 30px 0;
+
+    @media (max-width: 767px) {
+      padding-bottom: 20px;
+    }
     li {
       padding-left: 15px;
       list-style-type: none;
       display: inline-block;
 
+      &:first-child {
+        padding-left: 0;
+      }
+
+      @media (max-width: 767px) {
+        padding-bottom: 10px;
+        &:nth-child(3) {
+          padding-left: 0;
+        }
+      }
+
       a {
         color: #111;
         text-transform: uppercase;
         font-size: 13px;
+
+        &:hover,&:focus,&:active{
+          color: #717171;
+          @include transition(all 0.3s ease);
+        }
       }
     }
   }
@@ -1087,50 +1159,6 @@ nav.menu-mobile{
       }
     }
   }
-}
-
-//scroll to top
-.btn-to-top{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-
-  a{
-    display: inline-block;
-    width: 100%;
-    cursor: pointer;
-    opacity: 1;
-    z-index: 99;
-    text-decoration: none;
-    @include transition(all 0.3s ease);
-  
-    border: 2px solid $primary-color;
-    width: 35px;
-    height: 35px;
-    line-height: 32px;
-    text-align: center;
-
-    &:hover{
-      background-color: $primary-color;
-      @include transition(all 0.3s ease);
-    }
-
-    li{
-      color: $primary-color;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: inherit;
-      position: relative;
-      z-index: 10;
-      list-style-type: none;
-
-      &:hover{
-        color: #fff;
-        @include transition(all 0.3s ease);
-      }
-    }
-  }
-  
 }
 
 .icon-bar {

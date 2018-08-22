@@ -105,7 +105,7 @@ h6 {
   8. Button Scroll to Top
 
 */
-@media (min-width: 768px) {
+@media (min-width: 1349px) {
   nav.menu-mobile {
     display: none !important; } }
 
@@ -182,7 +182,7 @@ h6 {
     .call-us .number-phone span {
       padding-left: 10px; }
 
-@media (max-width: 767px) {
+@media (max-width: 1350px) {
   nav.menu-desktop {
     display: none; } }
 
@@ -200,7 +200,7 @@ nav.menu-mobile {
     z-index: 100; }
   nav.menu-mobile .nav-logo {
     text-align: left;
-    width: 150px;
+    width: 200px;
     display: inline-block;
     padding-right: 50px;
     padding: 15px 0; }
@@ -256,6 +256,8 @@ nav.menu-mobile {
 .header {
   background-color: #707374;
   background-image: url("../images/header.jpg");
+  background-size: cover;
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh; }
@@ -264,7 +266,7 @@ nav.menu-mobile {
       height: 70vh; } }
   @media (max-width: 767px) {
     .header {
-      height: 100vh; } }
+      height: 70vh; } }
   .header .row {
     display: table;
     width: 100%;
@@ -286,6 +288,21 @@ nav.menu-mobile {
       padding: 50px 80px;
       top: 28%;
       left: 8%; }
+      @media (max-width: 1024px) {
+        .header .row .wrapper-header {
+          top: 40%;
+          left: 20%; } }
+      @media (max-width: 991px) and (min-width: 768px) {
+        .header .row .wrapper-header {
+          top: 30%;
+          left: 10%; } }
+      @media (max-width: 767px) {
+        .header .row .wrapper-header {
+          width: 100%;
+          left: 0;
+          top: 20%;
+          padding-left: 0px;
+          padding-right: 0px; } }
       .header .row .wrapper-header h1 {
         text-transform: uppercase;
         font-weight: 700;
@@ -316,9 +333,6 @@ nav.menu-mobile {
           line-height: 1.2;
           color: #fff;
           border: 2px solid;
-          -webkit-box-shadow: 0px 10px 11px -5px rgba(0, 0, 0, 0.3);
-          -moz-box-shadow: 0px 10px 11px -5px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 10px 11px -5px rgba(0, 0, 0, 0.3);
           display: inline-block;
           text-transform: uppercase; }
         .header .row .wrapper-header .header-btn a.main-btn {
@@ -329,8 +343,11 @@ nav.menu-mobile {
             .header .row .wrapper-header .header-btn a.main-btn {
               padding: 15px 64px; } }
           .header .row .wrapper-header .header-btn a.main-btn:hover, .header .row .wrapper-header .header-btn a.main-btn:focus, .header .row .wrapper-header .header-btn a.main-btn:active {
-            background-color: #1fb5f6;
-            border-color: #1fb5f6;
+            background-color: #ea454a;
+            border-color: #ea454a;
+            -webkit-box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.5);
             -webkit-transition: all 0.3s ease;
             -moz-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
@@ -398,8 +415,7 @@ nav.menu-mobile {
       padding: 50px 70px; }
       @media screen and (min-width: 768px) and (max-width: 1200px) {
         .section-1-2 .col-block .icon-block {
-          padding: 100px 0;
-          margin: 0 -15px; } }
+          padding: 100px 0 0 0; } }
       @media (max-width: 767px) {
         .section-1-2 .col-block .icon-block {
           padding: 50px 0; } }
@@ -428,6 +444,16 @@ nav.menu-mobile {
           font-size: 15px;
           text-transform: uppercase;
           padding: 15px 80px; }
+          .section-1-2 .col-block .icon-block .news-letter .news-letter-btn:hover, .section-1-2 .col-block .icon-block .news-letter .news-letter-btn:focus, .section-1-2 .col-block .icon-block .news-letter .news-letter-btn:active {
+            background-color: #ea454a;
+            border-color: #ea454a;
+            -webkit-box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.5);
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease; }
       .section-1-2 .col-block .icon-block .contact-block {
         display: block;
         position: relative; }
@@ -472,11 +498,16 @@ nav.menu-mobile {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: grba(0, 0, 0, 0.35);
   height: 70vh; }
+  @media (max-width: 1024px) {
+    .section-video {
+      height: 50vh; } }
   .section-video .block-video {
     width: 400px;
     padding-top: 100px; }
+    @media (max-width: 767px) {
+      .section-video .block-video {
+        width: 100%; } }
     .section-video .block-video h2 {
       text-transform: uppercase;
       color: #fff;
@@ -486,11 +517,30 @@ nav.menu-mobile {
       padding-bottom: 25px; }
     .section-video .block-video p {
       color: #fff;
-      padding-bottom: 40px; }
-    .section-video .block-video .btn-main a {
+      padding-bottom: 40px;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 1.5s steps(30, end); }
+
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+    .section-video .block-video .main-btn a {
       color: #fff;
       background: #ce181e;
       padding: 15px 80px; }
+      .section-video .block-video .main-btn a:hover, .section-video .block-video .main-btn a:focus, .section-video .block-video .main-btn a:active {
+        background-color: #ea454a;
+        border-color: #ea454a;
+        -webkit-box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 15px 15px -15px rgba(0, 0, 0, 0.5);
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease; }
 
 .section-content {
   background-color: #1c1c1c; }
@@ -508,19 +558,38 @@ nav.menu-mobile {
   .section-content .col-md-6 {
     display: inline-block;
     width: 48%; }
+    @media (max-width: 767px) {
+      .section-content .col-md-6 {
+        width: 100%; } }
 
 .footer-menu {
   background-color: #fff; }
   .footer-menu ul {
     padding: 30px 0; }
+    @media (max-width: 767px) {
+      .footer-menu ul {
+        padding-bottom: 20px; } }
     .footer-menu ul li {
       padding-left: 15px;
       list-style-type: none;
       display: inline-block; }
+      .footer-menu ul li:first-child {
+        padding-left: 0; }
+      @media (max-width: 767px) {
+        .footer-menu ul li {
+          padding-bottom: 10px; }
+          .footer-menu ul li:nth-child(3) {
+            padding-left: 0; } }
       .footer-menu ul li a {
         color: #111;
         text-transform: uppercase;
         font-size: 13px; }
+        .footer-menu ul li a:hover, .footer-menu ul li a:focus, .footer-menu ul li a:active {
+          color: #717171;
+          -webkit-transition: all 0.3s ease;
+          -moz-transition: all 0.3s ease;
+          -o-transition: all 0.3s ease;
+          transition: all 0.3s ease; }
 
 .section-2 {
   background-color: #f1faff; }
@@ -922,47 +991,6 @@ nav.menu-mobile {
             -moz-transition: all 0.3s ease;
             -o-transition: all 0.3s ease;
             transition: all 0.3s ease; }
-
-.btn-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px; }
-  .btn-to-top a {
-    display: inline-block;
-    width: 100%;
-    cursor: pointer;
-    opacity: 1;
-    z-index: 99;
-    text-decoration: none;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    border: 2px solid #ce181e;
-    width: 35px;
-    height: 35px;
-    line-height: 32px;
-    text-align: center; }
-    .btn-to-top a:hover {
-      background-color: #ce181e;
-      -webkit-transition: all 0.3s ease;
-      -moz-transition: all 0.3s ease;
-      -o-transition: all 0.3s ease;
-      transition: all 0.3s ease; }
-    .btn-to-top a li {
-      color: #ce181e;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: inherit;
-      position: relative;
-      z-index: 10;
-      list-style-type: none; }
-      .btn-to-top a li:hover {
-        color: #fff;
-        -webkit-transition: all 0.3s ease;
-        -moz-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        transition: all 0.3s ease; }
 
 .icon-bar {
   position: fixed;
