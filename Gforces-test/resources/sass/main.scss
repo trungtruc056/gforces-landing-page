@@ -1,0 +1,117 @@
+@import "color.scss";
+/* Reset  CSS */
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+}
+  
+body {
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+}
+  
+a{
+    text-decoration: none;
+}
+  
+p{
+    color: $text-color;
+    font-size: 15px;
+    line-height: 1.5;
+    @media screen and (min-width: 768px ) and (max-width: 1200px){
+        font-size: 14px;
+    }
+}
+  
+textarea {
+    font-family: 'Open Sans', sans-serif;
+}
+  
+h1 {
+    font-size: 48px;
+    line-height: 1.5;
+}
+  
+h2{
+    font-size: 36px;
+    line-height: 1.5;
+}
+  
+h3{
+    font-size: 24px;
+    line-height: 1.5;
+}
+  
+h4{
+    font-size: 22px;
+    line-height: 1.4;
+}
+  
+h5{
+    font-size: 20px;
+    line-height: 1.4;
+}
+  
+h6{
+    font-size: 18px;
+    line-height: 1.3;
+}
+  
+.container-fluid{
+    padding-right: 60px;
+    padding-left: 60px;
+    margin-right: auto;
+    margin-left: auto;
+}
+  
+@media (max-width: 1200px) {
+    .container-fluid{
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+}
+  
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .container {
+      max-width: 750px;
+    }
+}
+
+ @media (min-width: 992px) {
+    .container {
+      max-width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+      max-width: 1170px;
+    }
+}
+
+.pt-80{
+    padding-top: 80px;
+}
+  
+.pb-80{
+    padding-bottom: 80px;
+  }
+  
+.pb-150{
+    padding-bottom: 150px;
+}
+  
+@media screen and (min-width: 768px ) and (max-width: 1200px){
+    .pb-80.pb-tb-40{
+      padding-bottom: 40px;
+    }
+}
