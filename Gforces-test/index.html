@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, shrink-to-fit=no">
     <title>GForces Landing Page</title>
     <link rel="stylesheet" href="./resources/css/styles.css">
-    <link rel="stylesheet" href="./resources/fonts//icomoon/icomoon.ttf">
-    <link rel="stylesheet" href="./resources/fonts/simple-line-icons/Simple-Line-Icons.ttf">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="./resources/css/animation.css">
+    <link rel="stylesheet" href="./resources/libs/css/animation.css">
 </head>
 <body>
+
+    <!-- Icon Social Bar -->
+
     <div class="icon-bar">
         <a href="#"><i class="fa fa-comment-alt"></i></a> 
         <a href="#"><i class="fa fa-map-marker-alt"></i></a> 
         <a href="#"><i class="fa fa-pound-sign"></i></a> 
         <a href="#"><i class="fa fa-share-alt"></i></a>
     </div>
+
+    <!-- Header & Menu -->
     <header class="header" role="navigation">
         <nav class="menu-desktop">
             <div class="nav container-fluid">
@@ -43,13 +46,20 @@
             </div>
         </nav>
 
+        <!-- Menu Mobile -->
         <nav class="menu-mobile" role="navigation">
             <div class="container">
                 <div class="block-top-menu">
                         <div class="nav-logo">
                             <a class = "nav-brand" href="#">DEALER LOGO</a>
                         </div>
-                        <div class="icon-menu-mobile" id="icon-menu-mobile"><span class="icon-menu"></span></div>
+                        <div class="icon-menu-mobile" id="icon-menu-mobile">
+                            <div class="menu-icon" onclick="toggleMenu(this)">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                            </div>
+                        </div>
                 </div>
                 
                 <div class="item-menu" id = "collapse-menu">
@@ -64,10 +74,15 @@
                         <li><a href="#">Motability</a></li>
                         <li><a href="#">Contact Us</a></li>
                     </ul>
+                    <div class="call-us-mobile">
+                        <p class="text">Call Us</p>
+                        <p class="number-phone">000225555330<span class="fa fa-phone"></span></p>
+                    </div>
                 </div>
             </div>
           </nav>
 
+        <!-- Header -->
         <div class="container-fluid">
             <div class="row">
                 <div data-wow-delay="0.3s" class="wrapper-header wow fadeInUp">
@@ -82,9 +97,73 @@
             </div>
         </div>
     </header>
-    <!-- section 1 -->
+
+    <!-- Section Portfolio -->
+    <section>
+        <div class="portfolio-block">
+            <div class="portfolio-item">
+                <img src="./resources/images/banner-1.jpg" alt="Banner 1">
+                <div class="portfolio-content">
+                    <h2>New Cars</h2>
+                    <p>Discover the new car range</p>
+                    <a href="#" class="portfolio-btn">View New Card</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="./resources/images/banner-2.jpg" alt="Banner 2">
+                <div class="portfolio-content">
+                    <h2>Used Cars</h2>
+                    <p>Explore our apporved used cars</p>
+                    <a href="#" class="portfolio-btn">View Used Cars</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="./resources/images/banner-3.jpg" alt="Banner 3">
+                <div class="portfolio-content">
+                    <h2>Latest Offers</h2>
+                    <p>Discover our latest offers and promotions</p>
+                    <a href="#" class="portfolio-btn">View New Card</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="./resources/images/banner-4.jpg" alt="Banner 4">
+                <div class="portfolio-content">
+                    <h2>Finance</h2>
+                    <p>Affordable, flexible finance solutions</p>
+                    <a href="#" class="portfolio-btn">View Finance</a>
+                </div>
+            </div>
+            <div class="portfolio-item bg-dark">
+                <div class="portfolio-content">
+                    <h2>Verhicle valuation</h2>
+                    <p>Get a free valuation of your verhicle</p>
+                    <form class="portfolio-form">
+                        <div class="input-first">
+                            <div class="table-input">
+                                <div class="reg-input"><span class="fa fa-sun"></span><span>GB</span></div>
+                                <input type="text" placeholder="Enter Vehicle Reg">
+                            </div>
+                        </div>
+                        <input class="input-last" type="text" placeholder="Enter Vehicle Mileage">
+                    </form>
+                    <a href="#" class="portfolio-btn">Get Valuation</a>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="./resources/images/banner-6.jpg" alt="Banner 6">
+                <div class="portfolio-content">
+                    <h2>Book A Service</h2>
+                    <p>Arrange your next MOT or service online today</p>
+                    <a href="#" class="portfolio-btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section Location -->
     <section class="pt-80">
-        <div class="container section-1-2">
+        <div class="container section-location">
             <div class="col-img">
                 <img src="./resources/images/location-img.jpg" alt="Location Image">
             </div>
@@ -114,6 +193,7 @@
         </div>
     </section>
     
+    <!-- Section Video -->
     <section class="section-video">
         <div class="container">
             <div class="row">
@@ -128,27 +208,31 @@
         </div>
     </section>
 
+    <!-- Section Content -->
     <section class="pt-80 pb-80 section-content">
         <div class="container">
+            <h2>Welcome to dealer name</h2>
             <div class="row">
-                <h2>Welcome to dealer name</h2>
                 <div class="col-md-6">
-                    <p data-wow-delay="0.3s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                    <p data-wow-delay="0.3s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                    <p data-wow-delay="0.3s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                    <p data-wow-delay="0.3s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                    <p data-wow-delay="0.3s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                </div>
-                <div class="col-md-6">
-                    <p data-wow-delay="0.3s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                    <p data-wow-delay="0.3s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                    <p data-wow-delay="0.3s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                    <p data-wow-delay="0.3s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                    <p data-wow-delay="0.3s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                </div>
+                    <div class="col-inner">
+                    <p data-wow-delay="0.2s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                    <p data-wow-delay="0.2s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                    <p data-wow-delay="0.2s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                    <p data-wow-delay="0.2s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                    <p data-wow-delay="0.2s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                </div></div>
+                <div class="col-md-6"><div class="col-inner">
+                    <p data-wow-delay="0.2s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                    <p data-wow-delay="0.2s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                    <p data-wow-delay="0.2s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                    <p data-wow-delay="0.2s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                    <p data-wow-delay="0.2s" class="wow fadeInUp">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                </div></div>
             </div>
         </div>
     </section>
+
+    <!-- Footer Menu -->
     <section class="footer-menu">
         <div class="container">
             <div class="row">
@@ -170,71 +254,33 @@
         </div>
     </section>
 
-    <!--footer-->
-    <footer class="pt-80 pb-150 footer">
+    <!--Footer-->
+    <footer class="pt-80 footer">
         <div class="container">
             <div class="footer-wrapper">
                 <div class="footer-item">
-                    <div class="block-item">
-                        <h4>About Us</h4>
-                        <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-                        <hr>
-                        <p>&copy Lorem ipsum dolor sit amet<br>All Rights Reserved.</p>
+                    <div class="block-item block-left">
+                        <h5>© 2017 dealer name</h5>
+                        <p>Area, Town , City, Postcode.</p>
+                        <p>Reg Office: Lorem ipsum dt, g elit. Aenean commodo ligula eget dolor.</p>
+                        <p>Reg. Company Number: XXXXX</p>
+                        <p>VAT Reg. No. XXXXXXXX</p>
                     </div>
                 </div>
                 <div class="footer-item">
-                    <div class="block-item">
-                        <h4>Our Address</h4>
-                        <hr>
-                        <ul class="contact">
-                            <li><span class="icon-location-pin"></span><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p></li>
-                            <li><span class="icon-phone"></span><p>+ 123456 78</p></li>
-                            <li><span class="icon-envelope-letter"></span><p>info@yoursite.com</p></li>
-                            <li><span class="icon-globe"></span><p>www.yoursite.com</p></li>
-                        </ul>
+                    <div class="block-item block-right">
+                        <h5>Financial Disclosure</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolm ipsum dolor sit amet, consectetuer adipiscing elit. Aenean g elit. Aenean commodo ligulcommodo ligula eget dolor.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolm ipsum dolor sit amet, consectetuer adipiscing elit. Aenean g elit. Aenean. </p>
                     </div>
-                    <div class="block-item">
-                        <h4>Connect with Us</h4>
-                        <hr>
-                        <ul class="social">
-                            <li><a href="#" class="icon-social-facebook"></a></li>
-                            <li><a href="#" class="icon-social-twitter" ></a></li>
-                            <li><a href="#" class="icon-social-dribbble" ></a></li>
-                            <li><a href="#" class="icon-social-github"></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-item">
-                    <div class="block-item">
-                        <h4>Drop us a line</h4>
-                        <hr>
-                        <form>  
-                                <input class = "form-block" type="text" placeholder="Name">
-                                <div class="gt">
-                                    <input type="radio" value="male" name="radio" checked>
-                                    <label for="male">Male</label>
-                                    <input type="radio" value="female" name="radio">
-                                    <label for="female">Female</label>
-                                </div>
-                                <input class = "form-block"  type="text" placeholder="Email">
-                                <textarea class = "form-block" name="comment" cols="30" rows="10">Message</textarea>
-                                <input class = "form-block submit-form" type="submit" value="Send Message">
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
     </footer>
 
-    <script src="./resources/js/wow.min.js"></script>
-    <script>
-        new WOW().init();
-        document.getElementById('icon-menu-mobile').addEventListener('click',function(){
-            var item = document.getElementById('collapse-menu');
-            item.classList.toggle('collapse-menu');
-        });
-    </script>
+    <!-- Include JS File -->
+    <script src="./resources/libs/js/wow.min.js"></script>
+    <script src="./resources/libs/js/jquery-3.3.1.min.js"></script>
+    <script src="./resources/js/main.js"></script>
 
 </body>
 </html>
